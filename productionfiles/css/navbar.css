@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and  (max-width: 360px) {
+    nav{
+        position: fixed;
+        width: 100%;
+        background-color: rgb(25, 25, 53);
+        color: #fff;
+        padding: 15px;
+    }
+    nav .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .container ul{
+        display: flex;
+        list-style-type: none;
+        /* border: 1px solid red; */
+        padding: 10px;
+        margin-right: 10px;
+    }
+
+    .container ul li {
+        margin-left: 10px;
+    }
+}
