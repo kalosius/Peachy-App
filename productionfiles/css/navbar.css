@@ -28,5 +28,11 @@
 
     .container ul li {
         margin-left: 10px;
+
+    }
+    nav .container ul li a {
+        color: #fff !important;
+        text-decoration: none;
+
     }
 }
