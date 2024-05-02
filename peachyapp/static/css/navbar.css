@@ -2,6 +2,13 @@
     margin: 0;
     padding: 0;
 }
+/* 
+html,
+body {
+  display: flex;
+  justify-content: center;
+  font-family: Roboto, Arial, sans-serif;
+} */
 
 
 @media screen and  (max-width: 430px) {
@@ -11,6 +18,8 @@
         background-color: rgb(25, 25, 53);
         color: #fff !important;
         padding: 15px;
+        font-family: Roboto, Arial, sans-serif;
+        font-size: 15px;
     }
     nav .container{
         display: flex;
