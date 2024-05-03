@@ -111,7 +111,6 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 
 STATIC_ROOT = BASE_DIR / 'productionfiles'
 
-#check this incase of errors
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]

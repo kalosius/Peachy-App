@@ -9,17 +9,18 @@
 
 
     <div class="main-block">
-    <form action="/">
-      <h1>Create a free account</h1>
+    <form method="POST">
+        {% csrf_token %}
+      <h1>Register New Account</h1>
       <fieldset>
         <legend>
           <h3>Account Details</h3>
         </legend>
         <div  class="account-details">
-          <div><label>Email*</label><input type="text" name="name" required></div>
-          <div><label>Password*</label><input type="password" name="name" required></div>
-          <div><label>Repeat email*</label><input type="text" name="name" required></div>
-          <div><label>Repeat password*</label><input type="password" name="name" required></div>
+          <div><label for="username">Username*</label><input type="text" name="username" required></div>
+          <div><label for="email">Email*</label><input type="email" name="email" required></div>
+          <div><label for="password1">Password*</label><input type="password" name="password1" required></div>
+          <div><label for="password2">Repeat password*</label><input type="password" name="password2" required></div>
         </div>
       </fieldset>
       <fieldset>
@@ -28,23 +29,23 @@
         </legend>
         <div  class="personal-details">
           <div>
-            <div><label>Name*</label><input type="text" name="name" required></div>
-            <div><label>Phone*</label><input type="text" name="name" required></div>
-            <div><label>Street</label><input type="text" name="name"></div>
-            <div><label>City*</label><input type="text" name="name" required></div>
+            <div><label>First Name*</label><input type="text" name="first_name" required></div>
+            <div><label>Last Name</label><input type="text" name="last_name"></div>
+            <div><label>Phone*</label><input type="text" name="phone" required></div>
+            <div><label>City*</label><input type="text" name="city" required></div>
             <div>
               <label>Country*</label>  
               <select>
                 <option value=""></option>
-                <option value="Armenia">Armenia</option>
-                <option value="Russia">Russia</option>
+                <option value="uganda">Uganda</option>
+                <!-- <option value="Russia">Russia</option>
                 <option value="Germany">Germany</option>
                 <option value="France">France</option>
                 <option value="USA">USA</option>
-                <option value="UK">UK</option>
+                <option value="UK">UK</option> -->
               </select>
             </div>
-            <div><label>Website</label><input type="text" name="name"></div>
+            <!-- <div><label>Website</label><input type="text" name="name"></div> -->
           </div>
           <div>
             <div>
@@ -60,7 +61,7 @@
               <label>Birthdate*</label>
               <div class="bdate-block">
                 <select class="day" required>
-                  <option value=""></option>
+                  <option value="">Day</option>
                   <option value="01">01</option>
                   <option value="02">02</option>
                   <option value="03">03</option>
@@ -93,8 +94,8 @@
                   <option value="30">30</option>
                   <option value="31">31</option>
                 </select>
-                <select class="mounth" required>
-                  <option value=""></option>
+                <select class="mounth" required >
+                  <option value="">Month</option>
                   <option value="January">January</option>
                   <option value="February">February</option>
                   <option value="March">March</option>
@@ -108,24 +109,24 @@
                   <option value="November">November</option>
                   <option value="December">December</option>
                 </select>
-                <input type="text" name="name" required>
+                <input type="text" name="year" placeholder="Year" required>
               </div>
             </div>
             <div>
               <label>Nationality*</label>              
               <select required>
-                <option value=""></option>
-                <option value="Armenian">Armenian</option>
-                <option value="Russian">Russian</option>
+                <option value="">-----</option>
+                <option value="Ugandan" name="nationality">Ugandan</option>
+                <!-- <option value="Nigerian">Nigerian</option>
                 <option value="German">German</option>
                 <option value="French">French</option>
                 <option value="American">American</option>
-                <option value="English">English</option>
+                <option value="English">English</option> -->
               </select>
             </div>
             <div>
-              <label>Children*</label>
-              <div class="children"><input type="checkbox" name="name" required></div>
+              <label>Peachy whatsapp Group*</label>
+              <div class="children"><input type="checkbox" name="group" required></div>
             </div>
           </div>
         </div>
@@ -142,7 +143,7 @@
             <input type="checkbox" name="checkbox"><span>I want to recelve personallzed offers by your site</span>
           </div>
       </fieldset>
-      <button type="submit" href="/">Submit</button>
+      <button type="submit">Submit</button>
     </form>
     </div> 
  
