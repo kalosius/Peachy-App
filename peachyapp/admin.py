@@ -20,3 +20,5 @@ admin.site.unregister(User)
 
 # re-registering the new profile
 admin.site.register(User, UserAdmin)
+
+
