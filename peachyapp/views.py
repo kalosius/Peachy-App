@@ -51,9 +51,9 @@ def register(request):
         # country = request.POST['country']
         # gender = request.POST['gender']
         # nationality = request.POST['nationality']
-        # # group = request.POST['group']
+        # group = request.POST['group']
 
-        # user_details = Profile(first_name=first_name, last_name=last_name, email=email, phone=phone, city=city, country=country, nationality=nationality, gender=gender)
+        # user_details = Profile(first_name=first_name, last_name=last_name, email=email, phone=phone, city=city, country=country, nationality=nationality, gender=gender, group=group)
         # user_details.save()
         
 
