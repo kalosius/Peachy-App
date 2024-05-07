@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages, auth
-# Create your views here.
+from . models import Profile
 
 
 def home(request):
@@ -43,6 +43,20 @@ def register(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
 
+        # other details
+        # first_name = request.POST['first_name']
+        # last_name = request.POST['last_name']
+        # phone = request.POST['phone']
+        # city = request.POST['city']
+        # country = request.POST['country']
+        # gender = request.POST['gender']
+        # nationality = request.POST['nationality']
+        # # group = request.POST['group']
+
+        # user_details = Profile(first_name=first_name, last_name=last_name, email=email, phone=phone, city=city, country=country, nationality=nationality, gender=gender)
+        # user_details.save()
+        
+
         # Chech if passwords match
         if password1 == password2:
             if User.objects.filter(username=username).exists():
@@ -56,6 +70,8 @@ def register(request):
                     # Looks good
                     capitalize_username = username.capitalize()
                     user = User.objects.create_user(username=username, email=email, password=password1)
+                    # profile = Profile.objects.create(user=user, phone=phone, city=city, gender=gender, nationality=nationality, country=country)
+                    # profile.save()
                     # Login after registration
                     auth.login(request, user)
                     messages.success(request, f'Welcome {capitalize_username} to the PeachyBoys!')

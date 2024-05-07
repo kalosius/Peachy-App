@@ -7,6 +7,9 @@ class Profile(models.Model):
     GENDER_CHOICES = [('Male', 'Male'),('Female', 'Female')]
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=30, null=True, blank=True)
+    last_name = models.CharField(max_length=30, null=True, blank=True)
+    email = models.CharField(max_length=40, null=True, blank=True)
     date_modified = models.DateTimeField(User, auto_now=True)
     phone = models.CharField(max_length=20, blank=True)
     city = models.CharField(max_length=200, blank=True)

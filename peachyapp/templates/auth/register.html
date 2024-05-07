@@ -34,28 +34,29 @@
             <div><label>Phone*</label><input type="text" name="phone" required></div>
             <div><label>City*</label><input type="text" name="city" required></div>
             <div>
-              <label>Country*</label>  
-              <select>
+              <label for="country">Country*</label>  
+              <select name="country" required>
                 <option value=""></option>
-                <option value="uganda">Uganda</option>
-                <!-- <option value="Russia">Russia</option>
-                <option value="Germany">Germany</option>
-                <option value="France">France</option>
-                <option value="USA">USA</option>
-                <option value="UK">UK</option> -->
+                <option value="Uganda">Uganda</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Tanzania">Tanzania</option>
+                <!-- Add other country options as needed -->
               </select>
             </div>
+            
             <!-- <div><label>Website</label><input type="text" name="name"></div> -->
           </div>
           <div>
             <div>
               <label>Gender*</label>
               <div class="gender">
-                <input type="radio" value="none" id="male" name="gender" required/>
+                <input type="radio" id="male" name="gender" value="Male" required>
                 <label for="male" class="radio">Male</label>
-                <input type="radio" value="none" id="female" name="gender" required/>
+            
+                <input type="radio" id="female" name="gender" value="Female" required>
                 <label for="female" class="radio">Female</label>
               </div>
+            </div>
             </div>
             <div class="birthdate">
               <label>Birthdate*</label>
@@ -113,17 +114,14 @@
               </div>
             </div>
             <div>
-              <label>Nationality*</label>              
-              <select required>
+              <label for="nationality">Nationality*</label>              
+              <select name="nationality" required>
                 <option value="">-----</option>
-                <option value="Ugandan" name="nationality">Ugandan</option>
-                <!-- <option value="Nigerian">Nigerian</option>
-                <option value="German">German</option>
-                <option value="French">French</option>
-                <option value="American">American</option>
-                <option value="English">English</option> -->
+                <option value="Ugandan">Ugandan</option>
+                <!-- Other nationality options -->
               </select>
             </div>
+            
             <div>
               <label>Peachy whatsapp Group*</label>
               <div class="children"><input type="checkbox" name="group" required></div>
