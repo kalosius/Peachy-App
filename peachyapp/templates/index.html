@@ -3,8 +3,9 @@
 {% bootstrap_css %}
 {% load static %}
 {% block content %}
-
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
+
+
 {% for message in messages %}
     {{ message }}
 {% endfor %}
