@@ -2,146 +2,142 @@
 {% load static %}
 {% block content %}
 
-
-
-<br><br><br><br><br>
-
-
-    <div class="main-block">
-    <form method="POST">
-        {% csrf_token %}
-      <h1>Register New Account</h1>
-      <fieldset>
-        <legend>
-          <h3>Account Details</h3>
-        </legend>
-        <div  class="account-details">
-          <div><label for="username">Username*</label><input type="text" name="username" required></div>
-          <div><label for="email">Email*</label><input type="email" name="email" required></div>
-          <div><label for="password1">Password*</label><input type="password" name="password1" required></div>
-          <div><label for="password2">Repeat password*</label><input type="password" name="password2" required></div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>
-          <h3>Personal Details</h3>
-        </legend>
-        <div  class="personal-details">
-          <div>
-            <div><label>First Name*</label><input type="text" name="first_name" required></div>
-            <div><label>Last Name</label><input type="text" name="last_name"></div>
-            <div><label>Phone*</label><input type="text" name="phone" required></div>
-            <div><label>City*</label><input type="text" name="city" required></div>
-            <div>
-              <label for="country">Country*</label>  
-              <select name="country" required>
-                <option value=""></option>
-                <option value="Uganda">Uganda</option>
-                <option value="Kenya">Kenya</option>
-                <option value="Tanzania">Tanzania</option>
-                <!-- Add other country options as needed -->
-              </select>
+    <div class="container">
+      
+        <form method="POST">
+            {% csrf_token %}
+          <h1>Register New Account</h1>
+          <fieldset>
+            <legend>
+              <h3>Account Details</h3>
+            </legend>
+            <div  class="account-details">
+              <div><label for="username">Username*</label><input type="text" name="username" required></div>
+              <div><label for="email">Email*</label><input type="email" name="email" required></div>
+              <div><label for="password1">Password*</label><input type="password" name="password1" required></div>
+              <div><label for="password2">Repeat password*</label><input type="password" name="password2" required></div>
             </div>
-            
-            <!-- <div><label>Website</label><input type="text" name="name"></div> -->
-          </div>
-          <div>
-            <div>
-              <label>Gender*</label>
-              <div class="gender">
-                <input type="radio" id="male" name="gender" value="Male" required>
-                <label for="male" class="radio">Male</label>
-            
-                <input type="radio" id="female" name="gender" value="Female" required>
-                <label for="female" class="radio">Female</label>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Personal Details</h3>
+            </legend>
+            <div  class="personal-details">
+              <div>
+                <div><label>First Name*</label><input type="text" name="first_name" required></div>
+                <div><label>Last Name</label><input type="text" name="last_name"></div>
+                <div><label>Phone*</label><input type="text" name="phone" required></div>
+                <div><label>City*</label><input type="text" name="city" required></div>
+                <div>
+                  <label for="country">Country*</label>  
+                  <select name="country" required>
+                    <option value=""></option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <!-- Add other country options as needed -->
+                  </select>
+                </div>
+                
+                <!-- <div><label>Website</label><input type="text" name="name"></div> -->
+              </div>
+              <div>
+                <div>
+                  <label>Gender*</label>
+                  <div class="gender">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male" class="radio">Male</label>
+                
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female" class="radio">Female</label>
+                  </div>
+                </div>
+                </div>
+                <div class="birthdate">
+                  <label>Birthdate*</label>
+                  <div class="bdate-block">
+                    <select class="day" required>
+                      <option value="">Day</option>
+                      <option value="01">01</option>
+                      <option value="02">02</option>
+                      <option value="03">03</option>
+                      <option value="04">04</option>
+                      <option value="05">05</option>
+                      <option value="06">06</option>
+                      <option value="07">07</option>
+                      <option value="08">08</option>
+                      <option value="09">09</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                      <option value="13">13</option>
+                      <option value="14">14</option>
+                      <option value="15">15</option>
+                      <option value="16">16</option>
+                      <option value="17">17</option>
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                      <option value="30">30</option>
+                      <option value="31">31</option>
+                    </select>
+                    <select class="mounth" required >
+                      <option value="">Month</option>
+                      <option value="January">January</option>
+                      <option value="February">February</option>
+                      <option value="March">March</option>
+                      <option value="April">April</option>
+                      <option value="May">May</option>
+                      <option value="June">June</option>
+                      <option value="July">July</option>
+                      <option value="August">August</option>
+                      <option value="September">September</option>
+                      <option value="October">October</option>
+                      <option value="November">November</option>
+                      <option value="December">December</option>
+                    </select>
+                    <input type="text" name="year" placeholder="Year" required>
+                  </div>
+                </div>
+                <div>
+                  <label for="nationality">Nationality*</label>              
+                  <select name="nationality" required>
+                    <option value="">-----</option>
+                    <option value="Ugandan">Ugandan</option>
+                    <!-- Other nationality options -->
+                  </select>
+                </div>
+                
+                <div>
+                  <label for="group">Peachy whatsapp Group*</label>
+                  <div class="children"><input type="checkbox" name="group"></div>
+                </div>
               </div>
             </div>
-            </div>
-            <div class="birthdate">
-              <label>Birthdate*</label>
-              <div class="bdate-block">
-                <select class="day" required>
-                  <option value="">Day</option>
-                  <option value="01">01</option>
-                  <option value="02">02</option>
-                  <option value="03">03</option>
-                  <option value="04">04</option>
-                  <option value="05">05</option>
-                  <option value="06">06</option>
-                  <option value="07">07</option>
-                  <option value="08">08</option>
-                  <option value="09">09</option>
-                  <option value="10">10</option>
-                  <option value="11">11</option>
-                  <option value="12">12</option>
-                  <option value="13">13</option>
-                  <option value="14">14</option>
-                  <option value="15">15</option>
-                  <option value="16">16</option>
-                  <option value="17">17</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
-                </select>
-                <select class="mounth" required >
-                  <option value="">Month</option>
-                  <option value="January">January</option>
-                  <option value="February">February</option>
-                  <option value="March">March</option>
-                  <option value="April">April</option>
-                  <option value="May">May</option>
-                  <option value="June">June</option>
-                  <option value="July">July</option>
-                  <option value="August">August</option>
-                  <option value="September">September</option>
-                  <option value="October">October</option>
-                  <option value="November">November</option>
-                  <option value="December">December</option>
-                </select>
-                <input type="text" name="year" placeholder="Year" required>
+          </fieldset>
+          <fieldset>
+            <legend>
+              <h3>Terms and Mailing</h3>
+            </legend>
+            <div  class="terms-mailing">
+              <div class="checkbox">
+                <input type="checkbox" name="checkbox"><span>I accept the <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs.</a></span>
               </div>
-            </div>
-            <div>
-              <label for="nationality">Nationality*</label>              
-              <select name="nationality" required>
-                <option value="">-----</option>
-                <option value="Ugandan">Ugandan</option>
-                <!-- Other nationality options -->
-              </select>
-            </div>
-            
-            <div>
-              <label for="group">Peachy whatsapp Group*</label>
-              <div class="children"><input type="checkbox" name="group"></div>
-            </div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend>
-          <h3>Terms and Mailing</h3>
-        </legend>
-        <div  class="terms-mailing">
-          <div class="checkbox">
-            <input type="checkbox" name="checkbox"><span>I accept the <a href="https://www.w3docs.com/privacy-policy">Privacy Policy for W3Docs.</a></span>
-          </div>
-          <div class="checkbox">
-            <input type="checkbox" name="checkbox"><span>I want to recelve personallzed offers by your site</span>
-          </div>
-      </fieldset>
-      <button type="submit">Submit</button>
-    </form>
+              <div class="checkbox">
+                <input type="checkbox" name="checkbox"><span>I want to recelve personallzed offers by your site</span>
+              </div>
+          </fieldset>
+          <button type="submit">Submit</button>
+        </form>
     </div> 
  
 

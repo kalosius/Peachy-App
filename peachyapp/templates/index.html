@@ -3,37 +3,31 @@
 {% bootstrap_css %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/home.css' %}">
 
 
 {% for message in messages %}
     {{ message }}
 {% endfor %}
-<main>
-    <section id="home">
-        <img src="{% static 'images/home_images/sneakers.jpeg' %}" alt="">
+
+    <div class="container">
         <h1>Welcome to PeachyBoys</h1>
         <p>This is a sample paragraph about the PeachyBoys</p>
-    </section>
 
-    <section id="about">
         <h2>About Us</h2>
-        <p>More information about the PeachyBoys <br>Coming Soon..!!</p>
-    </section>
+        <p>More information about the PeachyBoys<br>Coming Soon..!!</p>
 
-    <section id="services">
         <h2>Our Services</h2>
-        <p>A brief overview of the services offered by the PeachyBoys <br>Coming Soon..!!</p>
-    </section>
+        <p>A brief overview of the services offered by the PeachyBoys<br>Coming Soon..!!</p>
 
-    <section id="contact">
         <h2>Contact Us</h2>
-        <p>Get in touch with us for any inquiries or support. <br><button class="btn btn-primary" onclick="window.location.href='tel:0758056162'">
-            Click to Call
-        </button>
-            <br><a href="https://wa.me/0758056162?text=SGVsbG8sIHdvcmxkIGluIHRoZXknZW4%3D" style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none;">Chat with us on WhatsApp</a>
-<br>
+        <p>Get in touch with us for any inquiries or support.<br>
+            <button class="btn btn-primary" onclick="window.location.href='tel:0758056162'">
+                Click to Call
+            </button>
+            <br>
+            <button class="btn btn-success" ><a href="https://wa.me/0758056162?text=SGVsbG8sIHdvcmxkIGluIHRoZXknZW4%3D" style="text-decoration: none; color: white;">Chat with us on WhatsApp</a></button>
+            <br>
         </p>
-    </section>
-</main>
+    </div>
+
 {% endblock %}
