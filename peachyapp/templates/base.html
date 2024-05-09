@@ -42,7 +42,12 @@
             {% if user.is_authenticated %}
             <ul class="dropdown-menu">
               <!-- <li><a class="dropdown-item" href="{% url 'user_login' %}">Login</a></li> -->
-              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li><a class="dropdown-item dropdown-toggle" href="#">Settings</a>
+                <li><a class="dropdown-item" href="{% url 'update_password' %}">Change Password</a></li>
+                <li><a class="dropdown-item" href="{% url 'update_user' %}">User Profile</a></li>
+
+              
+              </li>
               <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
             </ul>
             {% else %}
@@ -58,24 +63,6 @@
     </div>
   </nav>
 
-    <!-- <nav>
-        <div class="container">
-            <h1>PeachyBoys</h1>
-            <ul>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'logout' %}">Logout</a></li>
-                {% else %}
-                <li><a href="{% url 'user_login' %}">Login</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li>
-                    
-                {% endif %} -->
-                    
-                <!-- <li><a href="{% url 'user_login' %}">Login</a></li>
-                <li><a href="{% url 'register' %}">Register</a></li> -->
-            <!-- </ul>
-        </div>
-    </nav> -->
 
     
 

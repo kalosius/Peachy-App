@@ -4,8 +4,49 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages, auth
 from . models import Profile
+from . forms import ChangePasswordForm, UpdateUserForm
+
+def update_user(request):
+    if request.user.is_authenticated:
+        current_user = User.objects.get(id=request.user.id)
+        user_form = UpdateUserForm(request.POST or None, instance=current_user)
+        if user_form.is_valid():
+            user_form.save()
+            login(request, current_user)
+            messages.success(request, 'User has been Updated!!')
+            return redirect("home")
+        return render(request, "auth/update_user.html", {"user_form":user_form})
+    else:
+        messages.success(request, "You must be logged in to access the page!!")
+        return redirect("home")
 
 
+
+
+def update_password(request):
+    if request.user.is_authenticated:
+        current_user = request.user 
+        # Is form filled out?
+        if request.method == "POST":
+            form = ChangePasswordForm(current_user, request.POST)
+
+            if form.is_valid():
+                form.save()
+                messages.success, "Your Password Has Been Updated, Please Log In Again.."
+                return redirect('user_login')
+            else:
+                
+                for error in list(form.errors.values()):
+                    messages.error(request, error)  #This helps for django errors
+                    return redirect('update_password')
+
+        else:
+            form = ChangePasswordForm(current_user)
+            return render(request, "auth/update_password.html", {"form":form})
+        
+    else:
+        messages.success(request, 'You must be logged in to view page')
+        return redirect('home')
 
 
 def birthdays(request):
