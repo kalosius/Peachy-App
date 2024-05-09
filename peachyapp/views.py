@@ -6,6 +6,14 @@ from django.contrib import messages, auth
 from . models import Profile
 
 
+
+
+def birthdays(request):
+    return render(request, 'products/birthdays.html', {})
+
+def events(request):
+    return render(request, 'products/events.html', {})
+
 def home(request):
     return render(request, 'index.html', {})
 

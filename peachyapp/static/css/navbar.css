@@ -1,51 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
+.navbar{
+    background-color: rgb(25, 25, 53) !important;
+
 }
-/* 
-html,
-body {
-  display: flex;
-  justify-content: center;
-  font-family: Roboto, Arial, sans-serif;
-} */
 
-
-@media screen and  (max-width: 430px) {
-    nav{
-        position: fixed;
-        width: 100%;
-        background-color: rgb(25, 25, 53);
-        color: #fff !important;
-        padding: 15px;
-        font-family: Roboto, Arial, sans-serif;
-        font-size: 15px;
-    }
-    nav .container{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-
-    .container ul{
-        display: flex;
-        list-style-type: none;
-        /* border: 1px solid red; */
-        padding: 10px;
-        margin-right: 10px;
-    }
-
-    .container ul li {
-        margin-left: 10px;
-
-    }
-    nav .container ul li a {
-        color: #fff !important;
-        text-decoration: none;
-
-    }
-
-    nav .container h1{
-        color: #fff !important;
-    }
-}

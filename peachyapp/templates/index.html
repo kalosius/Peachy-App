@@ -5,7 +5,9 @@
 {% block content %}
 
 <link rel="stylesheet" href="{% static 'css/home.css' %}">
-
+{% for message in messages %}
+    {{ message }}
+{% endfor %}
 <main>
     <section id="home">
         <img src="{% static 'images/home_images/sneakers.jpeg' %}" alt="">

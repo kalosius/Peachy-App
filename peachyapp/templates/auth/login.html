@@ -2,17 +2,38 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/login.css' %}">
     
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
 {% for message in messages %}
         {{ message }}
     {% endfor %}
-<body>
+
+
+  <div class="container">
+    <h1 style="text-align: center !important;">Login </h1>
     
+    <form method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" placeholder="Enter Username" name="username" required>
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" placeholder="Enter Password" name="password" required>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Keep me logged in</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+      
+  </div>
     
         
-    <form method="POST">
+    <!-- <form method="POST">
         {% csrf_token %}
       <h1>Login Form</h1>
       <div class="formcontainer">
@@ -30,7 +51,7 @@
         </label>
         <span class="psw"><a href="#"> Forgot password?</a></span>
       </div>
-    </form>
-</body>
+    </form> -->
+
 
 {% endblock %}
